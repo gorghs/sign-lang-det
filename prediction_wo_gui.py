@@ -7,7 +7,7 @@ import traceback
 
 model = load_model('/cnn8grps_rad1_model.h5')
 white = np.ones((400, 400), np.uint8) * 255
- white = cv2.imread("C:\Users\karthick\Desktop\Sign-Language-To-Text-and-Speech-Conversion-master\white.jpg")
+white = cv2.imread("C:\Users\karthick\Desktop\Sign-Language-To-Text-and-Speech-Conversion-master\white.jpg",white)
 
 capture = cv2.VideoCapture(0)
 
