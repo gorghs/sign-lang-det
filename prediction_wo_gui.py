@@ -7,7 +7,7 @@ import traceback
 
 model = load_model('/cnn8grps_rad1_model.h5')
 white = np.ones((400, 400), np.uint8) * 255
-white = cv2.imread("C:\Users\karthick\Desktop\Sign-Language-To-Text-and-Speech-Conversion-master\white.jpg",white)
+cv2.imwrite("C:\Users\karthick\Desktop\Sign-Language-To-Text-and-Speech-Conversion-master\white.jpg", white)
 
 capture = cv2.VideoCapture(0)
 
@@ -44,7 +44,7 @@ while True:
             hand = hands[0]
             x, y, w, h = hand['bbox']
             image = frame[y - offset:y + h + offset, x - offset:x + w + offset]
-             white = cv2.imread("C:\Users\karthick\Desktop\Sign-Language-To-Text-and-Speech-Conversion-master\white.jpg")
+            white = cv2.imread("C:\Users\karthick\Desktop\Sign-Language-To-Text-and-Speech-Conversion-master\white.jpg")
             # img_final=img_final1=img_final2=0
             handz = hd2.findHands(image, draw=False, flipType=True)
             if handz:
