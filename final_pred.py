@@ -216,6 +216,7 @@ class Application:
             imgtk = ImageTk.PhotoImage(image=self.current_image)
             self.panel.imgtk = imgtk
             self.panel.config(image=imgtk)
+            # this is an universal pipeline for  dataflow
 
             if hands:
                 # #print(" --------- lmlist=",hands[1])
@@ -413,6 +414,7 @@ class Application:
                 ch1 = 3
 
         # con for [l][x]
+        
         l = [[6, 4], [6, 1], [6, 2]]
         pl = [ch1, ch2]
         if pl in l:
